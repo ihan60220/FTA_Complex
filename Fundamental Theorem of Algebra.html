@@ -5,32 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&display=swap" rel="stylesheet">
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-        body {
-            background-color: rgb(255, 246, 233);
-            font-family: Martian Mono;
-        }
-        .flex-container {
-            display: flex;
-            align-items: space-between;
-        }
-        .graphs {
-            width: 50%;
-            margin: auto;
-        }
-
-        .box {
-            width: 500px;
-            height: 30px;
-        }
-
-        #myRange {
-            width: 500px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Fundamental Theorem of Algebra</h1>
@@ -42,33 +17,33 @@
         3. You've just found the complex root of the polynomial!
     </p>
     <div class="flex-container">
-        <div class="graphs">
+        <div class="graphs_1">
             <div>
                 <div>
                     <h2 id="inputmap">Input Map |z| = </h2>
-                    <label text="Max Modulus: ">
-                        <input type="text" oninput="draw()" id="max-modulus">
-                    </label>
+                    <input type="text" oninput="draw()" id="max-modulus">
                 </div>
                 <input type="range" min="0" max="1000" class="slider" id="myRange" oninput="draw()">
             </div>
-
             <canvas id="input" width="500", height="500"></canvas>
         </div>
-        
-        <div>
+
+        <div class="graphs_2">
             <div>
                 <h2>
                     Output Map f(z) = <br>
-                    <input id="coefficients" type="text" class="box" onchange="draw()"
+                    <input id="coefficients" type="text" class="box" onchange="draw()">
                 </h2>
+                </div>
+                
+                <canvas id="output" width="500", height="500"></canvas>
             </div>
-            
-            <canvas id="output" width="500", height="500"></canvas>
         </div>
-        
     </div>
-    
+
+    <div class="floor">
+        by: Paul Han
+    </div>
 
 </body>
 <script src="complex.js"></script>
