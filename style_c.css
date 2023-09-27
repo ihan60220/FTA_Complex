@@ -1,0 +1,36 @@
+canvas {
+    border: 1px solid black;
+}
+body {
+    background-color: rgb(255, 246, 233);
+    font-family: Martian Mono;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    width: 500px;
+    height: 37px;
+}
+
+.graphs_1 {
+    position: absolute;
+    top: 220px;
+    left: 50px;
+}
+
+.graphs_2 {
+    position: absolute;
+    top: 220px;
+    left: 800px;
+}
+
+.floor {
+    height: 200px;
+}
+
+#myRange {
+    width: 500px;
+}

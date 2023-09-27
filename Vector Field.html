@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fundamental Theorem of Algebra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Vector Field</h1>
+    <p>
+        Instructions<br>
+        <br>
+        1. Pick a large modulus so that the origin is inside the output curve<br>
+        2. Slowly decrease the radius until the output curve intersects the origin<br>
+        3. You've just found the complex root of the polynomial!
+    </p>
+    <div class="flex-container">
+        <div class="graphs_1">
+            <div>
+                <div>
+                    <h2 id="inputmap">Input Map |z| = </h2>
+                    <input type="text" oninput="draw()" id="max-modulus">
+                </div>
+                <input type="range" min="0" max="1000" class="slider" id="myRange" oninput="draw()">
+            </div>
+            <canvas id="input" width="500", height="500"></canvas>
+        </div>
+
+        <div class="graphs_2">
+            <div>
+                <h2>
+                    Output Map f(z) = <br>
+                    <input id="coefficients" type="text" class="box" onchange="draw()">
+                </h2>
+                </div>
+                
+                <canvas id="output" width="500", height="500"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="floor">
+        by: Paul Han
+    </div>
+
+</body>
+<script src="complex.js"></script>
+</html>
