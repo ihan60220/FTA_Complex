@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fundamental Theorem of Algebra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&display=swap" rel="stylesheet">
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+        body {
+            background-color: rgb(255, 246, 233);
+            font-family: Martian Mono;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fundamental Theorem of Algebra</h1>
+    <div>
+        <div>
+            <div>
+                <h2 id="inputmap">Input Map |z| = </h2>
+                <input type="range" min="0" max="20" class="slider" id="myRange" oninput="draw()">
+            </div>
+
+            <canvas id="input" width="500", height="500"></canvas>
+        </div>
+        
+        <div>
+            <h2>Output Map f(z) = ax^3 + bx^2 + cx + d</h2>
+            <input type="text"><input type="submit" onclick="">
+            <input type="text"><input type="submit" onclick="">
+            <input type="text"><input type="submit" onclick="">
+            <input type="text"><input type="submit" onclick="">
+        </div>
+        
+        <canvas id="output" width="500", height="500"></canvas>
+    </div>
+    
+
+</body>
+<script src="complex.js"></script>
+</html>
