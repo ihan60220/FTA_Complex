@@ -13,12 +13,32 @@
             background-color: rgb(255, 246, 233);
             font-family: Martian Mono;
         }
+        .flex-container {
+            display: flex;
+            align-items: space-between;
+        }
+        .graphs {
+            width: 50%;
+            margin: auto;
+        }
+
+        .box {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
     <h1>Fundamental Theorem of Algebra</h1>
-    <div>
-        <div>
+    <p>
+        Instructions<br>
+        <br>
+        1. Pick a large modulus so that the origin is inside the output curve<br>
+        2. Slowly decrease the radius until the output curve intersects the origin<br>
+        3. You've just found the complex root of the polynomial!
+    </p>
+    <div class="flex-container">
+        <div class="graphs">
             <div>
                 <h2 id="inputmap">Input Map |z| = </h2>
                 <input type="range" min="0" max="20" class="slider" id="myRange" oninput="draw()">
@@ -28,14 +48,19 @@
         </div>
         
         <div>
-            <h2>Output Map f(z) = ax^3 + bx^2 + cx + d</h2>
-            <input type="text"><input type="submit" onclick="">
-            <input type="text"><input type="submit" onclick="">
-            <input type="text"><input type="submit" onclick="">
-            <input type="text"><input type="submit" onclick="">
+            <div>
+                <h2>
+                    Output Map f(z) = <br>
+                    <input type="text" class="box">x^3
+                     + <input type="text" class="box">x^2 
+                     + <input type="text" class="box">x 
+                     + <input type="text" class="box">
+                </h2>
+            </div>
+            
+            <canvas id="output" width="500", height="500"></canvas>
         </div>
         
-        <canvas id="output" width="500", height="500"></canvas>
     </div>
     
 
