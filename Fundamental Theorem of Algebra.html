@@ -23,8 +23,12 @@
         }
 
         .box {
-            width: 30px;
+            width: 500px;
             height: 30px;
+        }
+
+        #myRange {
+            width: 500px;
         }
     </style>
 </head>
@@ -40,8 +44,13 @@
     <div class="flex-container">
         <div class="graphs">
             <div>
-                <h2 id="inputmap">Input Map |z| = </h2>
-                <input type="range" min="0" max="20" class="slider" id="myRange" oninput="draw()">
+                <div>
+                    <h2 id="inputmap">Input Map |z| = </h2>
+                    <label text="Max Modulus: ">
+                        <input type="text" oninput="draw()" id="max-modulus">
+                    </label>
+                </div>
+                <input type="range" min="0" max="1000" class="slider" id="myRange" oninput="draw()">
             </div>
 
             <canvas id="input" width="500", height="500"></canvas>
@@ -51,10 +60,7 @@
             <div>
                 <h2>
                     Output Map f(z) = <br>
-                    <input type="text" class="box">x^3
-                     + <input type="text" class="box">x^2 
-                     + <input type="text" class="box">x 
-                     + <input type="text" class="box">
+                    <input id="coefficients" type="text" class="box" onchange="draw()"
                 </h2>
             </div>
             
